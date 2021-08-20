@@ -1,0 +1,146 @@
+.contact {
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px 0 120px;
+}
+
+.contact-title-holder {
+    margin: 0 auto;
+    max-width: 370px;
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.contact-title {
+    font-size: 90px;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 50px;
+}
+
+.contact-subtitle {
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 25px;
+}
+
+.contact-flex-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex-column {
+    width: calc((100% / 12) * 5);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-item, .form-textarea {
+    border: none;
+    outline: none;
+    font-family: 'Raleway', sans-serif;
+}
+
+.form-item {
+    height: 50px;
+    background-color: rgba(0, 196, 196, .5);
+    color: #fff;
+    padding: 20px;
+    margin-bottom: 15px;
+    transition: all .2s linear;
+}
+
+.form-item::-webkit-input-placeholder {
+    color: #fff;
+}
+
+.form-item:last-child {
+    margin: 0;
+}
+
+.form-item:hover {
+    background-color: rgba(0, 196, 196, 1);
+}
+
+.form-item:focus {
+    background-color: rgba(0, 196, 196, 1);
+    border-left: 5px solid #355b82;
+}
+
+.form-textarea {
+    resize: none;
+    height: 255px;
+}
+
+
+.examples-item {
+    margin-bottom: 15px;
+}
+
+.examples-item:last-child {
+    margin: 0;
+}
+
+.examples-title {
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.example-text {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1;
+}
+
+.footer {
+    background-color: #262626;
+    min-height: 90px;
+}
+
+.footer-flex-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
+}
+
+.footer-flex-col,
+.cahee,
+.with-love {
+    color: #b9b9b9;
+}
+
+.footer-flex-col {
+    align-self: center;
+}
+
+.footer-flex-col:first-child {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.cahee {
+    font-size: 25px;
+    font-family: 'Pacifico', cursive;
+    transition: all .2s linear;
+}
+
+.with-love {
+    font-size: 15px;
+    font-weight: 300;
+    transition: all .2s linear;
+}
+
+.with-love > span {
+    font-weight: 700;
+    color: #ff2b58;
+}
+
+.cahee:hover, .with-love:hover {
+    color: #e2e2e2;
+}

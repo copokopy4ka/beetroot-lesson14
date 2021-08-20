@@ -1,0 +1,71 @@
+@import 'fonts/raleway';
+@import 'fonts/services-icons';
+@import 'vars';
+@import 'pages/index';
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: $raleway;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+h1, h2 {
+    margin: 0;
+    padding: 0;
+    color: #262626;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 15px;
+    width: 100%;
+}
+
+.btn {
+    font-family: inherit;
+    display: inline-block;
+    padding: 20px 42px;
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 300;
+    box-shadow: $btn-shadow;
+    transition: all .2s linear;
+
+    &:hover {
+        box-shadow: $btn-hover-shadow;
+    }
+
+    &_intro {
+        background-color: $orange;
+    }
+
+    &_blog {
+        background-color: $red;
+        text-align: center;
+    }
+}
