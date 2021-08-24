@@ -3,144 +3,196 @@
     background-repeat: no-repeat;
     background-size: cover;
     padding: 100px 0 120px;
-}
 
-.contact-title-holder {
-    margin: 0 auto;
-    max-width: 370px;
-    text-align: center;
-    margin-bottom: 45px;
-}
+    @include breakpoint($tablet-bp) {
+        padding: 75px 0 90px;
+    }
 
-.contact-title {
-    font-size: 90px;
-    font-weight: 700;
-    line-height: 1;
-    margin-bottom: 50px;
-}
+    @include breakpoint($mobile-bp) {
+        padding: 40px 0 30px;
+    }
 
-.contact-subtitle {
-    font-size: 17px;
-    font-weight: 300;
-    line-height: 25px;
-}
+    &__title-holder {
+        max-width: 370px;
+        text-align: center;
+        margin: 0 auto 45px;
+    
+        @include breakpoint($mobile-bp) {
+            margin: 0 auto 15px;
+        }
+    }
 
-.contact-flex-row {
-    display: flex;
-    justify-content: space-between;
-}
+    &__title {
+        font-size: 90px;
+        font-weight: 700;
+        line-height: 1;
+        margin-bottom: 50px;
 
-.flex-column {
-    width: calc((100% / 12) * 5);
-}
+        @include breakpoint($tablet-bp) {
+            font-size: 75px;
+            margin-bottom: 20px;
+        }
+    
+        @include breakpoint($mobile-bp) {
+            font-size: 60px;
+        }
+    }
 
-.contact-form {
-    display: flex;
-    flex-direction: column;
-}
+    &__subtitle {
+        font-size: 17px;
+        font-weight: 300;
+        line-height: 25px;
 
-.form-item, .form-textarea {
-    border: none;
-    outline: none;
-    font-family: 'Raleway', sans-serif;
-}
+        @include breakpoint($tablet-bp) {
+            font-size: 15px;
+            line-height: 23px;
+        }
+    
+        @include breakpoint($mobile-bp) {
+            font-size: 14px;
+            line-height: 22px;
+        }
+    }
 
-.form-item {
-    height: 50px;
-    background-color: rgba(0, 196, 196, .5);
-    color: #fff;
-    padding: 20px;
-    margin-bottom: 15px;
-    transition: all .2s linear;
-}
+    &__flex-row {
+        display: flex;
+        justify-content: space-between;
 
-.form-item::-webkit-input-placeholder {
-    color: #fff;
-}
+        @include breakpoint($mobile-bp) {
+            flex-direction: column;
+        }
+    }
 
-.form-item:last-child {
-    margin: 0;
-}
+    &__col {
+        width: calc((100% / 12) * 5);
+    
+        @include breakpoint($mobile-bp) {
+            width: 70%;
+        }
 
-.form-item:hover {
-    background-color: rgba(0, 196, 196, 1);
-}
+        @media screen and (max-width: 500px) {
+            width: 100%;
+        }
+    }
 
-.form-item:focus {
-    background-color: rgba(0, 196, 196, 1);
-    border-left: 5px solid #355b82;
-}
+    &__form {
+        display: flex;
+        flex-direction: column;
 
-.form-textarea {
-    resize: none;
-    height: 255px;
-}
+        @include breakpoint($mobile-bp) {
+            margin: 0 auto 15px;
+        }
 
+        
+    }
 
-.examples-item {
-    margin-bottom: 15px;
-}
+    &__form-item {
+        font-size: 15px;
+        font-weight: 700;
+        background-color: rgba(0, 196, 196);
+        color: #fff;
+        opacity: .5;
+        padding: 20px;
+        margin: 0 0 15px;
+        transition: all .2s linear;
 
-.examples-item:last-child {
-    margin: 0;
-}
+        @include breakpoint($mobile-bp) {
+            padding: 15px;
+            margin: 0 0 10px;
+            font-size: 13px;
+            font-weight: 500;
+        }
 
-.examples-title {
-    font-size: 17px;
-    font-weight: 700;
-    line-height: 1;
-    margin-bottom: 10px;
-}
+        &::placeholder,
+        &::-webkit-input-placeholder {
+            color: #fff;
+            font-weight: 300;
+        }
 
-.example-text {
-    font-size: 20px;
-    font-weight: 300;
-    line-height: 1;
-}
+        &:last-child {
+            margin: 0;
+        }
 
-.footer {
-    background-color: #262626;
-    min-height: 90px;
-}
+        &:hover {
+            background-color: rgba(0, 196, 196);
+            opacity: 1;
+        }
 
-.footer-flex-row {
-    display: flex;
-    justify-content: space-between;
-    padding: 30px 0;
-}
+        &:focus {
+            background-color: rgba(0, 196, 196);
+            border-left: 5px solid #355b82;
+            opacity: 1;
+        }
 
-.footer-flex-col,
-.cahee,
-.with-love {
-    color: #b9b9b9;
-}
+        &_textarea {
+            resize: none;
+            height: 255px;
 
-.footer-flex-col {
-    align-self: center;
-}
+            @include breakpoint($mobile-bp) {
+                height: 155px;
+            }
+        }
+    }
 
-.footer-flex-col:first-child {
-    font-size: 16px;
-    font-weight: 300;
-}
+    &__info {
 
-.cahee {
-    font-size: 25px;
-    font-family: 'Pacifico', cursive;
-    transition: all .2s linear;
-}
+        @include breakpoint($mobile-bp) {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
 
-.with-love {
-    font-size: 15px;
-    font-weight: 300;
-    transition: all .2s linear;
-}
+        @media screen and (max-width:500px) {
+            flex-direction: column;
+        }
+    }
 
-.with-love > span {
-    font-weight: 700;
-    color: #ff2b58;
-}
+    &__info-item {
+        margin-bottom: 15px;
 
-.cahee:hover, .with-love:hover {
-    color: #e2e2e2;
+        @include breakpoint($mobile-bp) {
+            width: calc(100% / 3);
+            padding: 0 15px;
+            margin: 0;
+        }
+
+        @media screen and (max-width:500px) {
+            width: 100%;
+            margin: 0 0 10px;
+        }
+
+        &:last-child {
+            margin: 0;
+        }
+    }
+
+    &__info-title {
+        font-size: 17px;
+        font-weight: 700;
+        line-height: 1;
+        margin-bottom: 10px;
+
+        @include breakpoint($mobile-bp) {
+            margin: 0;
+            font-size: 12px;
+        }
+    }
+
+    &__info-link {
+        display: inline;
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 1;
+        color: inherit;
+        transition: color .2s linear;
+
+        @include breakpoint($mobile-bp) {
+            font-size: 14px;
+
+        }
+
+        &:hover {
+            color: rgba(0, 196, 196);
+        }
+    }
 }

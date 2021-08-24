@@ -1,6 +1,7 @@
 @import 'fonts/raleway';
 @import 'fonts/services-icons';
 @import 'vars';
+@import 'mixins';
 @import 'pages/index';
 
 html,
@@ -14,9 +15,16 @@ body {
     box-sizing: border-box;
 }
 
+button:focus,
+input:focus,
+a:focus {
+    outline: none;
+}
+
 a {
     display: block;
     text-decoration: none;
+    color: inherit;
 }
 
 img {
@@ -36,6 +44,13 @@ ul {
     padding: 0;
 }
 
+input,
+textarea {
+    border: none;
+    outline: none;
+    font-family: inherit;
+}
+
 .container {
     margin: 0 auto;
     max-width: 1200px;
@@ -46,15 +61,22 @@ ul {
 .btn {
     font-family: inherit;
     display: inline-block;
-    padding: 20px 42px;
+    padding: 20px 25px;
+    max-width: 200px;
+    width: 100%;
     border: none;
     color: #fff;
     text-transform: uppercase;
     cursor: pointer;
     font-size: 20px;
     font-weight: 300;
+    line-height: 1;
     box-shadow: $btn-shadow;
-    transition: all .2s linear;
+    transition: box-shadow .2s linear;
+
+    &:focus {
+        box-shadow: $btn-hover-shadow;
+    }
 
     &:hover {
         box-shadow: $btn-hover-shadow;
@@ -67,5 +89,19 @@ ul {
     &_blog {
         background-color: $red;
         text-align: center;
+    }
+
+    &_gallery {
+        background-color: $blue;
+    }
+
+    &_subscribe {
+        background-color: $green;
+    }
+
+    @include breakpoint($mobile-bp) {
+        padding: 15px 20px;
+        font-size: 16px;
+        max-width: 160px;
     }
 }

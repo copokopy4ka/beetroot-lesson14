@@ -1,24 +1,35 @@
 .header {
-
-
-    .container {
-        position: relative;
-    }
-
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    
     &__holder {
         display: flex;
         justify-content: space-between;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
         padding-top: 50px;
         z-index: 2;
+
+        @include breakpoint($mobile-bp) {
+            padding-top: 15px;
+        }
+    }
+
+    &__logo {
+        
+        @include breakpoint($mobile-bp) {
+            max-width: 80px;
+        }
     }
 
     &__nav {
         display: flex;
         align-items: center;
+
+        @include breakpoint($mobile-bp) {
+            display: none;
+        }
     }
 
     &__nav-list {
@@ -50,7 +61,7 @@
             height: 3px;
             background-color: $orange;
             opacity: 0;
-            transition: all .2s linear;
+            transition: opacity .2s linear;
         }
 
         &:hover:before {
